@@ -1,244 +1,103 @@
-@keyframes gradient-animation {
-    0% {
-        background-position: 0% 50%;
-        filter: brightness(1);
-    }
-    25% {
-        background-position: 50% 0%;
-        filter: brightness(1.2); /* Parlaklık artışı */
-    }
-    50% {
-        background-position: 100% 50%;
-        filter: brightness(1);
-    }
-    75% {
-        background-position: 50% 100%;
-        filter: brightness(0.8); /* Parlaklık azalması */
-    }
-    100% {
-        background-position: 0% 50%;
-        filter: brightness(1);
-    }
-}
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter Strike Item Satışı</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css"> <!-- CSS dosyasını buraya ekliyoruz -->
+</head>
+<body>
 
-body {
-    background: rgb(0, 0, 0); /* Arka plan rengi */
-    background: linear-gradient(90deg, rgb(255, 1, 1) 0%, rgb(112, 2, 2) 50%, rgb(94, 6, 165) 100%); /* Neon beyaz ve yeşil */
-    background-size: 400% 400%;
-    animation: gradient-animation 10s ease infinite; /* Daha uzun animasyon süresi */
-    color: white; /* Yazı rengi */
-    font-family: 'Poppins', sans-serif;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <a class="navbar-brand" href="#">
+            <img src="logo2.png" alt="Logo">
+            ReD Skins
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-between">
+            <div class="ml-auto d-flex">
+                <button class="btn btn-custom btn-success mr-2">BUY</button>
+                <button class="btn btn-custom btn-danger">SELL</button>
+            </div>
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#items">Rules</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
+    <div class="container flex-grow-1">
+        <header class="hero">
+            <h1>Welcome to our market!</h1>
+            <p>Buy the best items at the most affordable prices!</p>
+            <img src="BackGorund/glockw.jpg" alt="Ana Görsel" class="neon-photo">
+            <div class="scroll-icon">
+                <img src="asagi-kaydir-ok.png" alt="Aşağı Kaydır" class="scroll-arrow">
+            </div>
+        </header>
+        
+        <section id="items" class="mt-5">
+            <h2 class="text-center mb-4">EN ÇOK SATANLAR!</h2>
+            <div class="row">
+                <!-- Ürün Kartları -->
+                <div class="col-md-3 col-sm-6">
+                    <div class="item-card">
+                        <img src="İtems/karambitcrimsonweb.png" alt="Ürün Logosu" class="item-logo">
+                        <h5>Karambit - Crimson Web</h5>
+                        <p class="item-price">₺1500</p>
+                        <p>Stok Durumu: <span class="text-success">Stokta Var</span></p>
+                        <button class="btn btn-buy">Sepete Ekle</button>
+                        <button class="btn btn-inspect">İncele</button>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="item-card">
+                        <img src="İtems/awp-dragonlore.png" alt="Ürün Logosu" class="item-logo">
+                        <h5>AWP - Dragon Lore</h5>
+                        <p class="item-price">₺7000</p>
+                        <p>Stok Durumu: <span class="text-danger">Stokta Yok</span></p>
+                        <button class="btn btn-buy" disabled>Stokta Yok</button>
+                        <button class="btn btn-inspect" disabled>İncele</button>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="item-card">
+                        <img src="İtems/ak47-redline.png" alt="Ürün Logosu" class="item-logo">
+                        <h5>AK-47 - Redline</h5>
+                        <p class="item-price">₺800</p>
+                        <p>Stok Durumu: <span class="text-success">Stokta Var</span></p>
+                        <button class="btn btn-buy">Sepete Ekle</button>
+                        <button class="btn btn-inspect">İncele</button>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <div class="item-card">
+                        <img src="İtems/m4a4-howl.png" alt="Ürün Logosu" class="item-logo">
+                        <h5>M4A4 - Howl</h5>
+                        <p class="item-price">₺3000</p>
+                        <p>Stok Durumu: <span class="text-success">Stokta Var</span></p>
+                        <button class="btn btn-buy">Sepete Ekle</button>
+                        <button class="btn btn-inspect">İncele</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
 
+    <footer>
+        <p>© 2024 SKINS.GG - Tüm hakları saklıdır.</p>
+    </footer>
 
-.navbar {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: transparent;
-    padding: 10px 0;
-}
-
-.navbar-brand img {
-    width: 40px;
-    height: auto;
-}
-
-.navbar .nav-item {
-    margin: 0 0px;
-}
-
-.hero {
-    background-image: url('https://example.com/your-image.jpg'); /* Resim URL'sini buraya yerleştirin */
-    background-size: cover;
-    color: white;
-    padding: 100px 0;
-    text-align: center;
-    flex: 1;
-}
-
-footer {
-    padding: 10px 0;
-    text-align: center;
-    font-size: small;
-}
-
-.item-card {
-    background: rgba(0, 0, 0, 0.7);
-    border-radius: 10px;
-    padding: 20px;
-    color: white;
-    text-align: center;
-    margin-bottom: 20px;
-    position: relative;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    box-shadow: 0 0 20px rgba(0, 255, 0, 0.8); /* Neon yeşil gölge */
-    border: 2px solid transparent; /* Kenar boşluğu için */
-    transition: border 0.3s, box-shadow 0.3s; /* Geçiş efekti */
-}
-
-.item-card:hover {
-    background: rgba(0, 0, 0, 0.9);
-    border: 2px solid rgba(0, 255, 0, 0.8); /* Hover sırasında yeşil kenar */
-    box-shadow: 0 0 10px rgba(0, 255, 0, 1); /* Hover sırasında neon etkisi artırıldı */
-}
-
-
-.item-logo {
-    width: 100%;
-    height: 150px;
-    object-fit: cover;
-    margin-bottom: 10px;
-}
-
-.item-card h5 {
-    font-size: 1rem;
-    font-weight: 600;
-    margin-top: 5px;
-}
-
-.item-card p {
-    font-weight: 300;
-    font-size: 0.8rem;
-    margin: 5px 0;
-}
-
-.item-price {
-    font-size: 1rem;
-    font-weight: bold;
-    color: #00aaff;
-}
-
-.btn-buy, .btn-inspect {
-    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgb(4, 26, 31) 100%);
-    background-size: 400%;
-    animation: gradient-animation 8s ease infinite;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    transition: transform 0.3s;
-    margin-top: 10px;
-}
-
-.btn-buy:hover, .btn-inspect:hover {
-    transform: scale(1.05);
-    color: #ffffff; /* Neon beyaz rengi */
-    text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff; /* Neon etkisi için gölge ekliyoruz */
-}
-
-
-.btn-buy:disabled, .btn-inspect:disabled {
-    cursor: not-allowed;
-    opacity: 0.6;
-}
-
-.btn-buy:disabled:hover, .btn-inspect:disabled:hover {
-    transform: none;
-}
-
-.neon-photo {
-    width: 100%;
-    max-width: 900px;
-    margin: 0 auto;
-    border: 3px solid rgba(255, 255, 255, 0.7);
-    border-radius: 15px;
-    box-shadow: 0 0 20px rgba(33, 240, 5, 0.8), 0 0 30px rgba(0, 255, 255, 0.6);
-    transform: rotate(-5deg);
-    transition: transform 0.5s;
-}
-
-.neon-photo:hover {
-    transform: rotate(-8deg);
-}
-
-.scroll-icon {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-}
-
-.scroll-arrow {
-    width: 50px;
-    height: auto;
-    animation: bounce 1s infinite;
-}
-
-@keyframes bounce {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(10px);
-    }
-}
-
-.btn-hover-effect {
-    transition: background-color 0.3s ease, transform 0.3s ease;
-}
-
-.btn-hover-effect:hover {
-    background-color: rgba(4, 26, 31, 0.9);
-    transform: scale(1.05);
-}
-
-.item-card:hover {
-    background: rgba(0, 0, 0, 0.9);
-}
-
-.text-shadow {
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-.flex-container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-
-.btn-custom {
-    background-color: rgba(0, 123, 255, 0.8); /* Temel arka plan rengi */
-    border: none; /* Kenar çizgisini kaldır */
-    color: white; /* Yazı rengi beyaz */
-    padding: 10px 15px; /* Dikey ve yatay iç boşluk */
-    width: 100px; /* Buton genişliğini ayarla */
-    border-radius: 5px; /* Köşe yuvarlama */
-    font-size: 1rem; /* Yazı boyutu */
-    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Geçiş efekti */
-    box-shadow: 0 0 5px rgba(40, 167, 69, 0.8), 0 0 10px rgba(40, 167, 69, 0.6); /* Neon ışık efekti */
-}
-
-.btn-custom:hover {
-    background-color: rgba(0, 123, 255, 1); /* Hover sırasında arka plan rengi */
-    transform: translateY(-2px); /* Hover sırasında yukarı kaydırma efekti */
-    box-shadow: 0 0 5px rgba(40, 167, 69, 1), 0 0 20px rgba(40, 167, 69, 0.8); /* Hover sırasında neon parlama efekti */
-}
-
-.btn-success {
-    background-color: rgba(68, 174, 236, 0.8); /* Başarılı işlem rengi */
-    box-shadow: 0 0 2px rgba(255, 255, 255, 0.8), 0 0 10px rgba(40, 167, 69, 0.6); /* Neon ışık efekti */
-}
-
-.btn-success:hover {
-    background-color: rgba(40, 167, 69, 1); /* Başarılı işlem hover rengi */
-    box-shadow: 0 0 5px rgba(40, 167, 69, 1), 0 0 20px rgba(40, 167, 69, 0.8); /* Hover sırasında neon parlama efekti */
-}
-
-.btn-danger {
-    background-color: rgba(0, 122, 153, 0.8); /* Tehlikeli işlem rengi */
-    box-shadow: 0 0 2px rgba(255, 255, 255, 0.8), 0 0 10px rgba(220, 53, 69, 0.6); /* Neon ışık efekti */
-}
-
-.btn-danger:hover {
-    background-color: rgba(220, 53, 69, 1); /* Tehlikeli işlem hover rengi */
-    box-shadow: 0 0 5px rgba(220, 53, 69, 1), 0 0 20px rgba(220, 53, 69, 0.8); /* Hover sırasında neon parlama efekti */
-}
-
-
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
