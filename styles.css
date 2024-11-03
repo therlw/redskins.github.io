@@ -1,29 +1,29 @@
 @keyframes gradient-animation {
     0% {
         background-position: 0% 50%;
-        filter: brightness(1);
+        
     }
     25% {
         background-position: 50% 0%;
-        filter: brightness(1.2); /* Parlaklık artışı */
+        
     }
     50% {
         background-position: 100% 50%;
-        filter: brightness(1);
+        
     }
     75% {
         background-position: 50% 100%;
-        filter: brightness(0.8); /* Parlaklık azalması */
+        
     }
     100% {
         background-position: 0% 50%;
-        filter: brightness(1);
+        
     }
 }
 
 body {
     background: rgb(0, 0, 0); /* Arka plan rengi */
-    background: linear-gradient(90deg, rgb(255, 1, 1) 0%, rgb(112, 2, 2) 50%, rgb(94, 6, 165) 100%); /* Neon beyaz ve yeşil */
+    background: linear-gradient(90deg, rgb(17, 7, 7) 0%, rgb(37, 20, 99) 50%, rgb(96, 16, 201) 100%); /* Neon beyaz ve yeşil */
     background-size: 400% 400%;
     animation: gradient-animation 10s ease infinite; /* Daha uzun animasyon süresi */
     color: white; /* Yazı rengi */
@@ -240,3 +240,5 @@ footer {
     background-color: rgba(220, 53, 69, 1); /* Tehlikeli işlem hover rengi */
     box-shadow: 0 0 5px rgba(220, 53, 69, 1), 0 0 20px rgba(220, 53, 69, 0.8); /* Hover sırasında neon parlama efekti */
 }
+
+
