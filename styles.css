@@ -1,26 +1,39 @@
 @keyframes gradient-animation {
     0% {
         background-position: 0% 50%;
+        filter: brightness(1);
+    }
+    25% {
+        background-position: 50% 0%;
+        filter: brightness(1.2); /* Parlaklık artışı */
     }
     50% {
         background-position: 100% 50%;
+        filter: brightness(1);
+    }
+    75% {
+        background-position: 50% 100%;
+        filter: brightness(0.8); /* Parlaklık azalması */
     }
     100% {
         background-position: 0% 50%;
+        filter: brightness(1);
     }
 }
 
 body {
-    background: rgb(2, 0, 36);
-    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgb(1, 1, 15) 35%, rgb(4, 26, 31) 100%);
+    background: rgb(0, 0, 0); /* Arka plan rengi */
+    background: linear-gradient(90deg, rgb(255, 1, 1) 0%, rgb(112, 2, 2) 50%, rgb(94, 6, 165) 100%); /* Neon beyaz ve yeşil */
     background-size: 400% 400%;
-    animation: gradient-animation 8s ease infinite;
-    color: white;
+    animation: gradient-animation 10s ease infinite; /* Daha uzun animasyon süresi */
+    color: white; /* Yazı rengi */
     font-family: 'Poppins', sans-serif;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
+
+
 
 .navbar {
     display: flex;
@@ -66,7 +79,17 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    box-shadow: 0 0 20px rgba(0, 255, 0, 0.8); /* Neon yeşil gölge */
+    border: 2px solid transparent; /* Kenar boşluğu için */
+    transition: border 0.3s, box-shadow 0.3s; /* Geçiş efekti */
 }
+
+.item-card:hover {
+    background: rgba(0, 0, 0, 0.9);
+    border: 2px solid rgba(0, 255, 0, 0.8); /* Hover sırasında yeşil kenar */
+    box-shadow: 0 0 10px rgba(0, 255, 0, 1); /* Hover sırasında neon etkisi artırıldı */
+}
+
 
 .item-logo {
     width: 100%;
@@ -127,7 +150,7 @@ footer {
     margin: 0 auto;
     border: 3px solid rgba(255, 255, 255, 0.7);
     border-radius: 15px;
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(0, 255, 255, 0.6);
+    box-shadow: 0 0 20px rgba(33, 240, 5, 0.8), 0 0 30px rgba(0, 255, 255, 0.6);
     transform: rotate(-5deg);
     transition: transform 0.5s;
 }
