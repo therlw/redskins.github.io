@@ -1,0 +1,221 @@
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+body {
+    background: rgb(2, 0, 36);
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgb(1, 1, 15) 35%, rgb(4, 26, 31) 100%);
+    background-size: 400% 400%;
+    animation: gradient-animation 8s ease infinite;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+    padding: 10px 0;
+}
+
+.navbar-brand img {
+    width: 40px;
+    height: auto;
+}
+
+.navbar .nav-item {
+    margin: 0 0px;
+}
+
+.hero {
+    background-image: url('https://example.com/your-image.jpg'); /* Resim URL'sini buraya yerleştirin */
+    background-size: cover;
+    color: white;
+    padding: 100px 0;
+    text-align: center;
+    flex: 1;
+}
+
+footer {
+    padding: 10px 0;
+    text-align: center;
+    font-size: small;
+}
+
+.item-card {
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    padding: 20px;
+    color: white;
+    text-align: center;
+    margin-bottom: 20px;
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.item-logo {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.item-card h5 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+.item-card p {
+    font-weight: 300;
+    font-size: 0.8rem;
+    margin: 5px 0;
+}
+
+.item-price {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #00aaff;
+}
+
+.btn-buy, .btn-inspect {
+    background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgb(4, 26, 31) 100%);
+    background-size: 400%;
+    animation: gradient-animation 8s ease infinite;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: transform 0.3s;
+    margin-top: 10px;
+}
+
+.btn-buy:hover, .btn-inspect:hover {
+    transform: scale(1.05);
+    color: #ffffff; /* Neon beyaz rengi */
+    text-shadow: 0 0 5px #ffffff, 0 0 10px #ffffff; /* Neon etkisi için gölge ekliyoruz */
+}
+
+
+.btn-buy:disabled, .btn-inspect:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+.btn-buy:disabled:hover, .btn-inspect:disabled:hover {
+    transform: none;
+}
+
+.neon-photo {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    border: 3px solid rgba(255, 255, 255, 0.7);
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(0, 255, 255, 0.6);
+    transform: rotate(-5deg);
+    transition: transform 0.5s;
+}
+
+.neon-photo:hover {
+    transform: rotate(-8deg);
+}
+
+.scroll-icon {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.scroll-arrow {
+    width: 50px;
+    height: auto;
+    animation: bounce 1s infinite;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+}
+
+.btn-hover-effect {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-hover-effect:hover {
+    background-color: rgba(4, 26, 31, 0.9);
+    transform: scale(1.05);
+}
+
+.item-card:hover {
+    background: rgba(0, 0, 0, 0.9);
+}
+
+.text-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.btn-custom {
+    background-color: rgba(0, 123, 255, 0.8); /* Temel arka plan rengi */
+    border: none; /* Kenar çizgisini kaldır */
+    color: white; /* Yazı rengi beyaz */
+    padding: 10px 15px; /* Dikey ve yatay iç boşluk */
+    width: 100px; /* Buton genişliğini ayarla */
+    border-radius: 5px; /* Köşe yuvarlama */
+    font-size: 1rem; /* Yazı boyutu */
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Geçiş efekti */
+    box-shadow: 0 0 5px rgba(40, 167, 69, 0.8), 0 0 10px rgba(40, 167, 69, 0.6); /* Neon ışık efekti */
+}
+
+.btn-custom:hover {
+    background-color: rgba(0, 123, 255, 1); /* Hover sırasında arka plan rengi */
+    transform: translateY(-2px); /* Hover sırasında yukarı kaydırma efekti */
+    box-shadow: 0 0 5px rgba(40, 167, 69, 1), 0 0 20px rgba(40, 167, 69, 0.8); /* Hover sırasında neon parlama efekti */
+}
+
+.btn-success {
+    background-color: rgba(68, 174, 236, 0.8); /* Başarılı işlem rengi */
+    box-shadow: 0 0 2px rgba(255, 255, 255, 0.8), 0 0 10px rgba(40, 167, 69, 0.6); /* Neon ışık efekti */
+}
+
+.btn-success:hover {
+    background-color: rgba(40, 167, 69, 1); /* Başarılı işlem hover rengi */
+    box-shadow: 0 0 5px rgba(40, 167, 69, 1), 0 0 20px rgba(40, 167, 69, 0.8); /* Hover sırasında neon parlama efekti */
+}
+
+.btn-danger {
+    background-color: rgba(0, 122, 153, 0.8); /* Tehlikeli işlem rengi */
+    box-shadow: 0 0 2px rgba(255, 255, 255, 0.8), 0 0 10px rgba(220, 53, 69, 0.6); /* Neon ışık efekti */
+}
+
+.btn-danger:hover {
+    background-color: rgba(220, 53, 69, 1); /* Tehlikeli işlem hover rengi */
+    box-shadow: 0 0 5px rgba(220, 53, 69, 1), 0 0 20px rgba(220, 53, 69, 0.8); /* Hover sırasında neon parlama efekti */
+}
+
+
