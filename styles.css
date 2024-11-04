@@ -23,7 +23,7 @@
 
 body {
     background: rgb(0, 0, 0); /* Arka plan rengi */
-    background: linear-gradient(90deg, rgb(17, 7, 7) 0%, rgb(37, 20, 99) 50%, rgb(96, 16, 201) 100%); /* Neon beyaz ve yeşil */
+    background: linear-gradient(90deg, rgb(17, 7, 7) 0%, rgb(9, 3, 31) 50%, rgb(23, 3, 49) 100%); /* Neon beyaz ve yeşil */
     background-size: 400% 400%;
     animation: gradient-animation 10s ease infinite; /* Daha uzun animasyon süresi */
     color: white; /* Yazı rengi */
@@ -31,7 +31,10 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    overflow-y: auto; /* Dikey kaydırma çubuğuna izin ver */
+    overflow-x: hidden; /* Yatay kaydırma çubuğunu gizle */
 }
+
 
 
 
@@ -73,21 +76,31 @@ footer {
     padding: 20px;
     color: white;
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 20px; /* Footer ve diğer kartlardan daha fazla boşluk */
+    margin-right: 20px;  /* Kartların yan yana dizilmesinde boşluk bırakır */
     position: relative;
-    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    box-shadow: 0 0 20px rgba(0, 255, 0, 0.8); /* Neon yeşil gölge */
-    border: 2px solid transparent; /* Kenar boşluğu için */
-    transition: border 0.3s, box-shadow 0.3s; /* Geçiş efekti */
+    box-shadow: 0 0 20px rgba(0, 89, 255, 0.8); /* Neon gölge */
+    border: 2px solid transparent;
+    transition: border 0.3s, box-shadow 0.3s;
+    height: 100%;
+    overflow: hidden; /* Taşan içerikleri gizle */
 }
+
+.item-card img {
+    width: 100%; /* Genişliği tam kapsayıcı yap */
+    height: auto; /* Orantılı olarak yüksekliği ayarla */
+    object-fit: cover; /* Resmi kart boyutuna sığdır, kırpmadan */
+}
+
+
 
 .item-card:hover {
     background: rgba(0, 0, 0, 0.9);
-    border: 2px solid rgba(0, 255, 0, 0.8); /* Hover sırasında yeşil kenar */
-    box-shadow: 0 0 10px rgba(0, 255, 0, 1); /* Hover sırasında neon etkisi artırıldı */
+    border: 2px solid rgba(0, 247, 255, 0.8); /* Hover sırasında yeşil kenar */
+    box-shadow: 0 0 10px rgb(2, 214, 221); /* Hover sırasında neon etkisi artırıldı */
 }
 
 
@@ -242,3 +255,36 @@ footer {
 }
 
 
+
+
+
+@keyframes snow-fall {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(100vh);
+    }
+}
+
+.snowflake {
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: fall linear infinite;
+}
+
+@keyframes flutter {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(5px); }
+    100% { transform: translateX(-5px); }
+}
+
+@keyframes fall {
+    0% {
+        transform: translateY(-100px);
+    }
+    100% {
+        transform: translateY(100vh);
+    }
+}
