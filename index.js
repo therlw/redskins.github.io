@@ -7,8 +7,8 @@ const app = express();
 
 // Steam API ayarları
 passport.use(new SteamStrategy({
-    returnURL: 'http://127.0.0.1:5500/auth/steam/return', // Güncellendi
-    realm: 'http://127.0.0.1:5500/', // Güncellendi
+    returnURL: 'https://therlw.github.io/auth/steam/return', // Güncellendi
+    realm: 'https://therlw.github.io/', // Güncellendi
     apiKey: 'D769F6828EAED68EA9D889DE07D4F398' // Steam API anahtarınızı buraya koyun
   },
   (identifier, profile, done) => {
@@ -55,6 +55,7 @@ app.get('/', (req, res) => {
     res.send('<a href="/auth/steam">Steam ile Giriş Yap</a>');
 });
 
+// Sunucuyu dinleme
 app.listen(3000, () => {
     console.log('Sunucu 3000 portunda çalışıyor');
 });
