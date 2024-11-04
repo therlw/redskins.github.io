@@ -40,10 +40,18 @@ body {
 
 .navbar {
     display: flex;
-    justify-content: center;
+    justify-content: space-between; /* Öğeleri sağa ve sola yay */
     align-items: center;
     background: transparent;
     padding: 10px 0;
+}
+
+
+.navbar .button-group {
+    display: flex;
+    align-items: center;
+    flex: 1; /* Buton grubunu mümkün olan en fazla alanı kaplamaya zorla */
+
 }
 
 .navbar-brand img {
@@ -226,6 +234,8 @@ footer {
     font-size: 1rem; /* Yazı boyutu */
     transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Geçiş efekti */
     box-shadow: 0 0 5px rgba(40, 167, 69, 0.8), 0 0 10px rgba(40, 167, 69, 0.6); /* Neon ışık efekti */
+    flex: 0 0 auto; /* Butonların genişliğini otomatik ayarla */
+    margin: 0 3px; /* Butonlar arasındaki boşluğu ayarlayın */
 }
 
 .btn-custom:hover {
