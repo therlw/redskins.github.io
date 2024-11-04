@@ -288,3 +288,23 @@ footer {
         transform: translateY(100vh);
     }
 }
+
+@keyframes steam-logo-float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.steam-logo {
+    vertical-align: middle; /* Logo ve metin hizalaması */
+    padding: 0; /* Padding'i kaldırıyoruz */
+    margin-left: 10px;
+    margin-right: 20px; /* Metin ile logo arasındaki boşluğu ayarlamak için */
+    animation: steam-logo-float 1.5s ease-in-out infinite; /* Animasyon ekliyoruz */
+}
